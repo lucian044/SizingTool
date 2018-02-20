@@ -106,9 +106,9 @@ export class SizingtoolComponent implements OnInit {
   }
 
   getNumPossibleOS() {
+    this.numPossibleOS = [];
     var counter = 0;
     for (var i = 0; i < this.Oses.length; i++) {
-      if (this.Oses.indexOf(this.Oses[i]) < 0) {
         counter++;
         while (this.Oses[i] == this.Oses[i + 1]) {
           counter++
@@ -116,9 +116,8 @@ export class SizingtoolComponent implements OnInit {
         }
         this.numPossibleOS.push(counter);
         counter = 0;
-      }
     }
-    for (let o in this.numPossibleOS) {
+    for (let o of this.numPossibleOS) {
       console.log(o);
     }
   }
