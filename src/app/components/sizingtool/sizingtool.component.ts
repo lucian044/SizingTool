@@ -45,6 +45,8 @@ export class SizingtoolComponent implements OnInit {
   isCollapsedOther: any = true;
 
   Oses: any = [];
+  possibleOS: any = [];
+  numPossibleOS: any = [];
 
   vCPUSum: any = 0;
   vRAMSum: any = 0;
@@ -81,16 +83,44 @@ export class SizingtoolComponent implements OnInit {
     console.log(this.Oses);
   }
 
-  removeOS(name: string) {
+  removeOS(name: string, qty: number) {
     var index: number;
     var length = this.Oses.length;
-    for (var num = 0; num < length; num ++) {
+    console.log(qty);
+    while (qty > 0) {
       index = this.Oses.indexOf(name);
       if (index > -1) {
         this.Oses.splice(index, 1);
+        qty -= 1;
+      }
+      this.possibleOS.splice(this.possibleOS.indexOf(name), 1);
+    }
+  }
+
+  getPossibleOS() {
+    for (let opt of this.Oses) {
+      if (this.possibleOS.indexOf(opt) < 0)
+        this.possibleOS.push(opt);
+    }
+    console.log(this.possibleOS);
+  }
+
+  getNumPossibleOS() {
+    var counter = 0;
+    for (var i = 0; i < this.Oses.length; i++) {
+      if (this.Oses.indexOf(this.Oses[i]) < 0) {
+        counter++;
+        while (this.Oses[i] == this.Oses[i + 1]) {
+          counter++
+          i++
+        }
+        this.numPossibleOS.push(counter);
+        counter = 0;
       }
     }
-    console.log(this.Oses);
+    for (let o in this.numPossibleOS) {
+      console.log(o);
+    }
   }
 
   changeCollapse(name: string) {
