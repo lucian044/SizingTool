@@ -18,7 +18,7 @@
 <div class="container">
   <div class="row noprint" style="background-color: #337ab7; width: 80%">
     <div class="col-md-1">
-      <p style="margin-left: 0px">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCCA')" [attr.aria-expanded]="!isCollapsedCCA"
           aria-controls="collapseCCA">
           <h5>CCA</h5>
@@ -26,7 +26,7 @@
       </p>
     </div>
     <div class="col-md-1">
-      <p style="margin-left: 0px">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCCG')" [attr.aria-expanded]="!isCollapsedCCG"
           aria-controls="collapseCCG">
           <h5>CCG</h5>
@@ -34,7 +34,7 @@
       </p>
     </div>
     <div class="col-md-1">
-      <p style="margin-left: 0px">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCCW')" [attr.aria-expanded]="!isCollapsedCCW"
           aria-controls="collapseCCW">
           <h5>CCW</h5>
@@ -42,7 +42,7 @@
       </p>
     </div>
     <div class="col-md-1">
-      <p style="margin-left: 0px">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCPACS')" [attr.aria-expanded]="!isCollapsedCPACS"
           aria-controls="collapseCPACS">
           <h5>CPACS</h5>
@@ -50,15 +50,15 @@
       </p>
     </div>
     <div class="col-md-1">
-      <p style="margin-left: 0px">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCRMA')" [attr.aria-expanded]="!isCollapsedCRMA"
           aria-controls="collapseCRMA">
           <h5>CRMA</h5>
         </button>
       </p>
     </div>
-    <div class="col-md-1">
-      <p style="margin-left: 0px">
+    <div class="col-md-2">
+      <p style="margin-left: 0 auto">
         <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedDoseWatch')" [attr.aria-expanded]="!isCollapsedDoseWatch"
           aria-controls="collapseDoseWatch">
           <h5>DoseWatch</h5>
@@ -66,248 +66,570 @@
       </p>
     </div>
     <div class="col-md-1">
-        <p style="margin-left: 0px">
-          <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedLB')" [attr.aria-expanded]="!isCollapsedLB"
-            aria-controls="collapseLB">
-            <h5>LB</h5>
-          </button>
-        </p>
-      </div>
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedLB')" [attr.aria-expanded]="!isCollapsedLB"
+          aria-controls="collapseLB">
+          <h5>LB</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedMisc')" [attr.aria-expanded]="!isCollapsedMisc"
+          aria-controls="collapseMisc">
+          <h5>Misc</h5>
+        </button>
+      </p>
+    </div>
+  </div>
+  <div class="row noprint" style="background-color: #337ab7; width: 80%">
+    <div class="col-md-2">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedOnWatch')" [attr.aria-expanded]="!isCollapsedOnWatch"
+          aria-controls="collapseOnWatch">
+          <h5>OnWatch</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedPACS')" [attr.aria-expanded]="!isCollapsedPACS"
+          aria-controls="collapsePACS">
+          <h5>PACS</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedRISI')" [attr.aria-expanded]="!isCollapsedRISI"
+          aria-controls="collapseRISI">
+          <h5>RIS-I</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedc360')" [attr.aria-expanded]="!isCollapsedc360"
+          aria-controls="collapsec360">
+          <h5>C360</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedCA')" [attr.aria-expanded]="!isCollapsedCA"
+          aria-controls="collapseCA">
+          <h5>CA</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedRISIC')" [attr.aria-expanded]="!isCollapsedRISIC"
+          aria-controls="collapseRISIC">
+          <h5>RIS-IC</h5>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <button type="button" class="btn btn-primary" (click)="changeCollapse('isCollapsedOther')" [attr.aria-expanded]="!isCollapsedOther"
+          aria-controls="collapseOther">
+          <h5>Other</h5>
+        </button>
+      </p>
+    </div>
   </div>
   <div class="row noprint">
     <div class="col" *ngFor="let opt of cca">
       <div id="collapseCCA" [ngbCollapse]="isCollapsedCCA">
         <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-            opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
+          <div class="card-body"></div>
+          <input type="checkbox" (change)="showItems(opt.Application)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of ccg">
-      <div id="collapseCCG" [ngbCollapse]="isCollapsedCCG">
-        <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col" *ngFor="let opt of ccw">
-      <div id="collapseCCW" [ngbCollapse]="isCollapsedCCW">
-        <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col" *ngFor="let opt of cpacs">
-      <div id="collapseCPACS" [ngbCollapse]="isCollapsedCPACS">
-        <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-                opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col" *ngFor="let opt of crma">
-      <div id="collapseCRMA" [ngbCollapse]="isCollapsedCRMA">
-        <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-                  opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col" *ngFor="let opt of dosewatch">
-      <div id="collapseDoseWatch" [ngbCollapse]="isCollapsedDoseWatch">
-        <div class="card">
-          <div class="card-body">
-            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,  opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col" *ngFor="let opt of lb">
-        <div id="collapseLB" [ngbCollapse]="isCollapsedLB">
-          <div class="card">
-            <div class="card-body">
-              <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,  opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-            </div>
-          </div>
-        </div>
-      </div>
   </div>
-  <div class="row">
-    <div class="col" *ngFor="let opt of cca">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p class="hello"> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
-          <div id="{{ opt.vCPU }}" (click)="vCPU(opt.vCPU)">vCPU: {{ opt.vCPU }}</div>
+  <div class="col" *ngFor="let opt of ccg">
+    <div id="collapseCCG" [ngbCollapse]="isCollapsedCCG">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of ccg">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
+  </div>
+  <div class="col" *ngFor="let opt of ccw">
+    <div id="collapseCCW" [ngbCollapse]="isCollapsedCCW">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of ccw">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
+  </div>
+  <div class="col" *ngFor="let opt of cpacs">
+    <div id="collapseCPACS" [ngbCollapse]="isCollapsedCPACS">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+                opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of cpacs">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
+  </div>
+  <div class="col" *ngFor="let opt of crma">
+    <div id="collapseCRMA" [ngbCollapse]="isCollapsedCRMA">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+                  opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of crma">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
+  </div>
+  <div class="col" *ngFor="let opt of dosewatch">
+    <div id="collapseDoseWatch" [ngbCollapse]="isCollapsedDoseWatch">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of dosewatch">
-      <div id="{{ opt.Application }}" style="display:none">
-        <div class="col-md-10 box">
-          <h5>Application: {{ opt.Application }}</h5>
-          <p> OS: {{ opt.OS }}
-            <br /> Database: {{ opt.Database }}
-            <br /> vRAM: {{ opt.vRAM }}
-            <br /> vCPU: {{ opt.vCPU }}
-            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-            <br /> IOPS: {{ opt.IOPS }}
-            <br /> Interface 1: {{ opt.Interface1 }}
-            <br /> Interface 2: {{ opt.Interface2 }}
-            <br /> Interface 3: {{ opt.Interface3 }}
-            <br /> Notes: {{ opt.Notes }}
-            <br />
-          </p>
+  </div>
+  <div class="col" *ngFor="let opt of lb">
+    <div id="collapseLB" [ngbCollapse]="isCollapsedLB">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
     </div>
-    <div class="col" *ngFor="let opt of lb">
-        <div id="{{ opt.Application }}" style="display:none">
-          <div class="col-md-10 box">
-            <h5>Application: {{ opt.Application }}</h5>
-            <p> OS: {{ opt.OS }}
-              <br /> Database: {{ opt.Database }}
-              <br /> vRAM: {{ opt.vRAM }}
-              <br /> vCPU: {{ opt.vCPU }}
-              <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-              <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-              <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-              <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-              <br /> IOPS: {{ opt.IOPS }}
-              <br /> Interface 1: {{ opt.Interface1 }}
-              <br /> Interface 2: {{ opt.Interface2 }}
-              <br /> Interface 3: {{ opt.Interface3 }}
-              <br /> Notes: {{ opt.Notes }}
-              <br />
-            </p>
-          </div>
+  </div>
+  <div class="col" *ngFor="let opt of misc">
+    <div id="collapseMisc" [ngbCollapse]="isCollapsedMisc">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
         </div>
       </div>
-    <div class="row">
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of onwatch">
+    <div id="collapseOnWatch" [ngbCollapse]="isCollapsedOnWatch">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of pacs">
+    <div id="collapsePACS" [ngbCollapse]="isCollapsedPACS">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of risi">
+    <div id="collapseRISI" [ngbCollapse]="isCollapsedRISI">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of c360">
+    <div id="collapsec360" [ngbCollapse]="isCollapsedc360">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of ca">
+    <div id="collapseCA" [ngbCollapse]="isCollapsedCA">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of risic">
+    <div id="collapseRISIC" [ngbCollapse]="isCollapsedRISIC">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of other">
+    <div id="collapseOther" [ngbCollapse]="isCollapsedOther">
+      <div class="card">
+        <div class="card-body">
+          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col" *ngFor="let opt of cca">
+    <div id="{{ opt.Application }}" style="display:none">
       <div class="col-md-10 box">
-        <h4>Totals</h4>
-        <p> vRAM: : {{ vRAMSum }}
-          <br /> vCPU: {{ vCPUSum }}
-          <br /> RAID: {{ RAIDSum }}
-          <br /> IOPS: {{ IOPSSum }}
+        <input type="text" #qty/> Quantity
+        <h5>Application: {{ opt.Application }}</h5>
+        <p class="hello"> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value)">Set Quantity</button>
+        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS)">Reset Quantity</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of ccg">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
         </p>
       </div>
     </div>
   </div>
+  <div class="col" *ngFor="let opt of ccw">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of cpacs">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <input type="text" #qty/> Quantity
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value)">Set Quantity</button>
+        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS)">Reset Quantity</button>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of crma">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of dosewatch">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of lb">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of misc">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of onwatch">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of pacs">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of risi">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of c360">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of ca">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of risic">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let opt of other">
+    <div id="{{ opt.Application }}" style="display:none">
+      <div class="col-md-10 box">
+        <h5>Application: {{ opt.Application }}</h5>
+        <p> OS: {{ opt.OS }}
+          <br /> Database: {{ opt.Database }}
+          <br /> vRAM: {{ opt.vRAM }}
+          <br /> vCPU: {{ opt.vCPU }}
+          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+          <br /> IOPS: {{ opt.IOPS }}
+          <br /> Interface 1: {{ opt.Interface1 }}
+          <br /> Interface 2: {{ opt.Interface2 }}
+          <br /> Interface 3: {{ opt.Interface3 }}
+          <br /> Notes: {{ opt.Notes }}
+          <br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 box">
+      <h4>Totals</h4>
+      <p> vRAM: : {{ vRAMSum }}
+        <br /> vCPU: {{ vCPUSum }}
+        <br /> RAID: {{ RAIDSum }}
+        <br /> IOPS: {{ IOPSSum }}
+      </p>
+    </div>
+  </div>
+</div>

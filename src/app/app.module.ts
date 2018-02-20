@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { RouterModule } from '@angular/router';
 import { SizingtoolComponent } from './components/sizingtool/sizingtool.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SizingtoolComponent } from './components/sizingtool/sizingtool.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([ 
       { path: '', redirectTo: 'home', pathMatch: 'full' },
