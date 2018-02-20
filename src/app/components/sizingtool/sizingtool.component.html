@@ -1,0 +1,149 @@
+<br />
+<style>
+  p {
+    margin-left: 25px;
+  }
+
+  div.box {
+    border-style: outset;
+  }
+
+  @media print {
+    .noprint {
+      display: none;
+    }
+  }
+
+</style>
+<div class="container-fluid">
+  <div class="row noprint">
+    <div class="col-md-1">
+      <p style="margin-left: 0px">
+        <button type="button" class="btn btn-primary" (click)="isCollapsedCCA = !isCollapsedCCA" [attr.aria-expanded]="!isCollapsedCCA"
+          aria-controls="collapseCCA">
+          <h4>CCA</h4>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0px">
+        <button type="button" class="btn btn-primary" (click)="isCollapsedCCG = !isCollapsedCCG" [attr.aria-expanded]="!isCollapsedCCG"
+          aria-controls="collapseCCG">
+          <h4>CCG</h4>
+        </button>
+      </p>
+    </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0px">
+        <button type="button" class="btn btn-primary" (click)="isCollapsedCCW = !isCollapsedCCW" [attr.aria-expanded]="!isCollapsedCCW"
+          aria-controls="collapseCCW">
+          <h4>CCW</h4>
+        </button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let opt of cca">
+      <div id="collapseCCA" [ngbCollapse]="isCollapsedCCA">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, 
+            opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccg">
+      <div id="collapseCCG" [ngbCollapse]="isCollapsedCCG">
+        <div class="card">
+          <div class="card-body">
+              <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, 
+              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccw">
+      <div id="collapseCCW" [ngbCollapse]="isCollapsedCCW">
+        <div class="card">
+          <div class="card-body">
+              <input type="checkbox" (change)="showItems(opt.Application); vCPU($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, 
+              opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let opt of cca">
+      <div id="{{ opt.Application }}" style="display:none">
+        <script *ngIf="CCA.checked">
+          vCPU(opt.vCPU)  
+        </script>
+        <div class="col-md-10 box">
+          <h5>Application: {{ opt.Application }}</h5>
+          <p class="hello"> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <div id="{{ opt.vCPU }}" (click)="vCPU(opt.vCPU)">vCPU: {{ opt.vCPU }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccg">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccw">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+Application,OS,Database,vRAM,vCPU,RAID 5 GP1,RAID 1/0 GP2,RAID 5 GP3,RAID 5 GP4,IOPS,Interface1,Interface2,Interface3,Notes
+CCA - ATNA audit log server,MS 2012 R2 Std,,4,1,60,0,0,0,50,Fiber Channel,SAS,GigE,See installation  manual DOC1474072
+CCA - ATNA audit log DB server,MS 2012 R2 Std,MS SQL 2014 Std,4,1,125,0,0,0,50,Fiber Channel,SAS,GigE,OS - 60GB / DB - 65GB expanding based upon data retention policy requirements / See installation  manual DOC1474072
+CCA - ATR/MM/UV-ZFP-XDS database server ,MS 2012 R2 Std,MS SQL 2014 Std,12,4,350,0,0,0,200,Fiber Channel,SAS,GigE,"60 GB Ð OS/Database selected off of calculation tab / If ILM, Migrations, XDS submissions, etc., then memory needs to be increased to meet appropriate needs of all activities."
+CCA - AIM Standalone Server,MS 2012 R2 Std,,6,6,60,0,0,0,100,Fiber Channel,SAS,GigE,60 GB - OS
+CCA - EA Database only,MS 2012 R2 Std,MS SQL 2014 Std,4,4,60,0,0,0,500,Fiber Channel,SAS,GigE,60 GB Ð OS / Database selected off of calculation tab
+CCA - EA all-in-one (Standalone) ,MS 2012 R2 Std,MS SQL 2014 Std,10,12,60,0,0,0,300,Fiber Channel,SAS,GigE,"60 GB Ð OS / Database selected off of calculation tab / If ILM, Migrations, XDS submissions, etc., then memory needs to be increased to meet appropriate needs of all activities."
+CCA - EA App Server primary,MS 2012 R2 Std,,6,8,60,0,0,0,100,Fiber Channel,SAS,GigE,"60GB OS / If ILM, Migrations, XDS submissions, etc., then memory needs to be increased to meet appropriate needs of all activities."
+CCA - EA App Server secondary,MS 2012 R2 Std,,6,4,60,0,0,0,100,Fiber Channel,SAS,GigE,60GB OS
+CCA - UV-ZFP combined application and database (DICOM & XDS database for PIV) (50 CCU),MS 2012 R2 Std,MS SQL 2014 Std,32,8,92,0,300,0,500,Fiber Channel,SAS,GigE,"60 GB Ð OS/150>GB - Cache - can be on another drive and adjusted for the site /  Database is calcultate based on records entered on the calculation tap P10, each record is 10K, and addition 2GB is added to cover filters, flags, and user audits, recommended database be slit out into it's own RAID group."
+CCA - UV-ZFP database (XDS Database for PIV) ,MS 2012 R2 Std,MS SQL 2014 Std,16,4,92,0,0,0,200,Fiber Channel,SAS,GigE,"60 GB Ð OS/ Database is calcultate based on records entered on the calculation tap P10, each record is 10K, and addition 2GB is added to cover filters, flags, and user audits"
+CCA - UV-ZFP Application node only  (DICOM &/or XDS apps server) (50 CCU),MS 2012 R2 Std,,16,4,60,0,300,0,100,Fiber Channel,SAS,GigE,60 GB Ð OS/150GB Cache - can be on another drive and adjusted for the site
+CCA - GE (ICW) XDS Registry DB server,MS 2012 R2 Std,MS SQL 2014 Std,16,8,0,116,0,0,210,Fiber Channel,SAS,GigE,"500GB (10K RPM) RAID 1 Ð (5) disk drives  (>70GB 15K RPM RAID 1 (OS) & 1TB iSCSI or fiber channel SAN or Solid State drives RAID recommended), Each Patient Registration uses 10kb, Each Document Registration uses 12kb, NOTE:  Example of 1 Million Patients and 500,000 documents uses at least 16GB of database disk space. "
+CCA - GE (ICW) XDS Registry App server ,MS 2012 R2 Std,,16,8,0,80,0,0,500,Fiber Channel,SAS,GigE,600GB disk space minimum  (>70GB 15K RPM RAID 10 recommended)
+CCA - Media Manager app for load balance ,MS 2012 R2 Std,,4,2,60,0,0,0,100,Fiber Channel,SAS,GigE,60 GB Ð OS
+CCA - Media Manager with Database only ,MS 2012 R2 Std,MS SQL 2014 Std,4,2,160,0,0,0,100,Fiber Channel,SAS,GigE,60 GB Ð OS/100GB database
+CCA - Media Manager with app and Database,MS 2012 R2 Std,MS SQL 2014 Std,8,4,160,0,0,0,100,Fiber Channel,SAS,GigE,60 GB Ð OS/100GB database
+CCA - ICW eMPI Database server,MS 2012 R2 Std,MS SQL 2014 Std,16,8,0,77,0,0,500,Fiber Channel,SAS,GigE,60GB - OS / _ Each Patient Local MRN Record uses 3.5kb + 3.5kb for enterprise account 
+CCA - ICW eMPI web server ,MS 2012 R2 Std,,8,8,0,240,0,0,100,Fiber Channel,SAS,GigE,60GB - OS / Additional 20kb per message
+CCA - NextGate eMPI DB server (3.75GB database per 1 Million records),MS 2012 R2 Std,MS SQL 2014 Std,80,20,0,79,0,0,500,Fiber Channel,SAS,GigE,60 GB Ð OS/ database data base is calculated with 3.75K per record entered on the calculation tab K8 / CPU is calculated from J8
+CCA - NextGate eMPI App server (Supports 200K transactions per day) ,MS 2012 R2 Std,,16,4,0,60,0,0,100,Fiber Channel,SAS,GigE,60 GB Ð OS/
+CCA - CCG Server with no Database or DMWL.,MS 2012 R2 Std,,12,4,0,100,0,0,100,Fiber Channel,SAS,GigE,XDS Registry: 50 GB / eMPI: 10 GB / rounded up to 100 GB including Windows OS
+"CCG - Large/regional, msg only, no DMWL",MS 2012 R2 Std,MS SQL 2014 Std,12,4,265,0,0,0,100,Fiber Channel,SAS,GigE,"For a CCG in a datacenter of a regional project, or at a very large site, without DICOM Modality Work List."
+"CCG - Small/local, messaging only, no DMWL",MS 2012 R2 Std,MS SQL 2014 Std,12,4,265,0,0,0,50,Fiber Channel,SAS,GigE,"For a local CCG at a small to mid-size site, without DICOM Modality Work List."
+CCG - with database (DMWL),MS 2012 R2 Std,MS SQL 2014 Std,12,4,265,0,0,0,300,Fiber Channel,SAS,GigE,CCG with a DICOM Modality Work List (requires a SQL server license)
+CCW - App Server,MS 2012 R2 Std,,8,8,100,0,0,0,100,Fiber Channel,SAS,GigE,More than 80 CCU ( plus Database server)
+CCW - Database Server Large,MS 2012 R2 Std,MS SQL 2012 Std,24,12,1229,0,0,0,600,Fiber Channel,SAS,GigE,More  than 80 CCU and more than 20000 studies /year ( plus Application Server)
+CCW - Database Server Medium ,MS 2012 R2 Std,MS SQL 2012 Std,24,8,900,0,0,0,500,Fiber Channel,SAS,GigE,More than 80 CCU and less than 20000 studies /year ( plus Application Server)
+CCW - Database/App Server (Large),MS 2012 R2 Std,MS SQL 2012 Std,24,12,1229,300,0,0,600,Fiber Channel,SAS,GigE,Up to 80 CCU and more than 20000 studies /year
+CCW - Database/App Server (Medium),MS 2012 R2 Std,MS SQL 2012 Std,24,8,900,300,0,0,500,Fiber Channel,SAS,GigE,Up to 80 CCU and less than 20000 studies /year
+CCW - Interface server,MS 2012 R2 Std,,8,12,100,0,0,0,100,Fiber Channel,SAS,GigE,1 per site
+CCW - TEST Database/App Server,MS 2012 R2 Std,MS SQL 2012 Std,16,8,600,300,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - CDPS,MS 2012 R2 Std,,2,2,76,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - DAS,RHEL5.8/6.8,,4,2,76,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - DBRep,RHEL5.8/6.8,,8,4,76,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - IMS 1800-3500TB,RHEL5.8/6.8,Sybase 12.5.4/15.7,64,16,7772,0,0,0,2000,Fiber Channel,SAS,GigE,76 GB - OS/216 GB Ð Logs/3708 GB Ð IMS/3772 GB - DBCC
+CPACS - IMS 550-1800GB,RHEL5.8/6.8,Sybase 12.5.4/15.7,64,16,4172,0,0,0,1500,Fiber Channel,SAS,GigE,76 GB - OS/216 GB Ð Logs/1908 GB Ð IMS/1972 GB - DBCC
+CPACS - IMS 300-550GB,RHEL5.8/6.8,Sybase 12.5.4/15.7,32,16,1528,0,0,0,1000,Fiber Channel,SAS,GigE,76 GB - OS/216 GB Ð Logs/584 GB Ð IMS/652 GB - DBCC
+CPACS - IMS 300GB,RHEL5.8/6.8,Sybase 12.5.4/15.7,16,4,1000,0,0,0,300,Fiber Channel,SAS,GigE,76 GB - OS/216 GB Ð Logs/324 GB Ð IMS/384 GB - DBCC
+CPACS - Coord,RHEL5.8/6.8, ,8,4,76,0,0,0,100,GigE,SAS,GigE, 
+CPACS - ITS/C2C,RHEL5.8/6.8,,4,2,76,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - IV Image Volume (one per 12TB of NAS to expose from SAN),RHEL5.8/6.8,,4,4,176,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - SPS Monitoring server,MS 2012 R2 Std,,4,2,85,0,0,0,100,Fiber Channel,SAS,GigE,
+CPACS - UV - AW Server node (16k / 8k slices for small node),Suse Linux 11,,24,8,,70,0,0,300,Fiber Channel,SAS,GigE,"70GB - OS - 4 users per node, 6 nodes max"
+CPACS - UV Controller w/ UV database,MS 2012 R2 Std,MS SQL 2012 Std,16,8,300,60,0,0,300,Fiber Channel,SAS,GigE,"60GB - OS, 300GB - Data partition"
+CPACS - UV Node (up to 50 CCU per node),MS 2012 R2 Std,,16,8,300,60,0,0,100,Fiber Channel,SAS,GigE,"60GB - OS, 300GB - Data partition"
+CPACS - UV Node (up to 50 CCU per node) - Separate UV web server OR Dakota,MS 2012 R2 Std,,32,8,250,0,0,0,100,Fiber Channel,SAS,GigE,"250GB - OS, Data partition"
+"CPACS - UV-ZFP server (600 st/hr, max 50 CCU)",MS 2012 R2 Std,,32,8,60,300,0,0,210,Fiber Channel,SAS,GigE,"60GB - OS, 300GB - Data partition - 8GB is the minimum spec"
+CPACS - XED Services (Xbus and/or X-Services ; or up to 4 X-Provider),MS 2012 R2 Std,,8,8,60,0,0,0,50,Fiber Channel,SAS,GigE,60GB - OS+Application
+CPACS - Workflow Manager (WFM) ,MS 2012 R2 Std,,16,8,250,0,0,0,100,Fiber Channel,SAS,GigE,"These are the basic settings, consult customers environmant for true settings. Consult SES"
+CPACS - WFM Admin Desktop,MS 2012 R2 Std,,8,4,50,0,0,0,50,Fiber Channel,SAS,GigE,50 GB - OS + Application - Can use existing ZFP Admin Desktop server
+CPACS - XE Services standalone mode (WFM),MS 2012 R2 Std,,16,8,60,0,0,0,50,Fiber Channel,SAS,GigE,60 GB - OS + Application - Supports all components and datasources (CPACS)
+CRMA (2D only),RHEL6.4,,8,1,20,0,0,0,50,Fiber Channel,SAS,GigE,"When calculating CRMA QTY is CC users and add the amount of images in a study that will be viewed, 200 is a good average if unknown"
+DoseWatch - App server,MS 2012 R2 Std,,8,4,50,0,50,0,75,Fiber Channel,SAS,GigE,
+DoseWatch - DB Analytics,MS 2012 R2 Std,,10,4,50,0,1000,0,150,Fiber Channel,SAS,GigE,Not yet available but added for future usage.
+DoseWatch - DB Server,MS 2012 R2 Std,MySQL 5.5.36,10,4,50,0,250,0,150,Fiber Channel,SAS,GigE,250 GB is the thin provisioning but it could growth up to 2Tb
+DoseWatch - Serphylink,MS 2012 R2 Std,,6,2,50,0,50,0,75,Fiber Channel,SAS,GigE,
+LB - A10 vThunder 1 Gbps Load Balancer,Linux/ACOS,,4,1,15,0,0,0,50,Fiber Channel,SAS,GigE,15 GB - OS + Application - Use vThunder_271_GR1_P3.ova
+LB - A10 vThunder 4 Gbps Load Balancer,Linux/ACOS,,12,2,15,0,0,0,50,Fiber Channel,SAS,GigE,15 GB - OS + Application - Use vThunder_271_GR1_P3.ova
+LB - F5 Virtual Edition 1 Gbps Load Balancer,CentOS6.6/TMOS,,8,4,20,142,0,0,50,Fiber Channel,SAS,GigE,162 GB - OS + Application - Use BIGIP-12.1.2.0.0.249.ALL-scsi.ova
+LB - F5 Virtual Edition 3 Gbps Load Balancer,CentOS6.6/TMOS,,16,8,20,142,0,0,50,Fiber Channel,SAS,GigE,162 GB - OS + Application - Use BIGIP-12.1.2.0.0.249.ALL-scsi.ova
+Misc. - vCenter,Appliance (Linux),,8,2,125,0,0,0,10,Fiber Channel,SAS,GigE,See: http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003882
+Misc. - Windows domain/AD server,MS 2012 R2 Std,,4,2,50,0,0,0,10,Fiber Channel,SAS,GigE,
+Misc. - Windows VM large,MS 2012 R2 Std,,16,4,200,0,0,0,10,Fiber Channel,SAS,GigE,Generic VM
+Misc. - Windows VM medium,MS 2012 R2 Std,,8,2,150,0,0,0,10,Fiber Channel,SAS,GigE,Generic VM
+Misc. - Windows VM small,MS 2012 R2 Std,,4,2,100,0,0,0,10,Fiber Channel,SAS,GigE,Generic VM
+OnWatch - Large (<8000 checks),Ubuntu,,6,6,120,0,0,0,100,Fiber Channel,SAS,GigE,"The disk size is highly dependent on the design of the checks and the use of graphs, each check creates its own database file."
+OnWatch - Medium (<3000 checks),Ubuntu,,4,4,80,0,0,0,75,Fiber Channel,SAS,GigE,"The disk size is highly dependent on the design of the checks and the use of graphs, each check creates its own database file."
+OnWatch - Small (<1500 checks),Ubuntu,,2,2,40,0,0,0,50,Fiber Channel,SAS,GigE,"The disk size is highly dependent on the design of the checks and the use of graphs, each check creates its own database file."
+OnWatch - X-Large (>8000 checks),Ubuntu,,8,8,120,0,0,0,200,Fiber Channel,SAS,GigE,"The disk size is highly dependent on the design of the checks and the use of graphs, each check creates its own database file."
+PACS IW - UV - AW Server node (16k slices),Suse Linux 11,,24,8,0,70,0,0,300,Fiber Channel,SAS,GigE,"70GB - OS - 4 users per node, 6 nodes max"
+PACS IW - UV Controller and database,MS 2012 R2 Std,MS SQL 2012 Std,8,8,0,370,0,0,300,Fiber Channel,SAS,GigE,
+PACS IW - UV Controller or node  (up to 50 CCU per node),MS 2012 R2 Std,,8,8,0,170,0,0,100,Fiber Channel,SAS,GigE,
+PACS IW - UV Database,MS 2012 R2 Std,MS SQL 2012 Std,8,8,0,370,0,0,300,Fiber Channel,SAS,GigE,
+"RIS-I - Add-on server - Print, Fax, VR, Interface",MS 2008 R2 Std,,16,6,279,0,0,0,100,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C:/128gb, E:/96Gb, T:/55Gb)"
+RIS-I - Citrix Server (18 non VR clients or 12 VR clients),MS 2008 R2 Std,,32,6,150,0,0,0,100,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C:, E:, T:)"
+RIS-I - DB server large (400 CCU),MS 2008 R2 Ent,Oracle 10gR2,128,16,192,748,176,0,500,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C: / 192Gb), Grp 2 is Oracle (E:/558Gb, R:/103Gb ; T: / 87Gb), Grp 3 is network shares (H:/160Gb, I:/16Gb, Q:/100Mb in cluster mode only) - no thin provisioning!"
+RIS-I - DB server medium (200 CCU),MS 2008 R2 Ent,Oracle 10gR2,64,8,192,469,176,0,400,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C: / 192Gb), Grp 2 is Oracle (E:/279Gb, R:/103Gb ; T: / 87Gb), Grp 3 is network shares (H:/160Gb, I:/16Gb, Q:/100Mb in cluster mode only) - no thin provisioning!"
+RIS-I - DB server small (100 CCU),MS 2008 R2 Std,Oracle 10gR2,32,6,192,280,56,0,300,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C: / 192Gb), Grp 2 is Oracle (E:/192Gb, R:/31Gb ; T: / 87Gb), Grp 3 is network shares (H:/48Gb, I:/8Gb, Q:/100Mb in cluster mode only) - no thin provisioning!"
+RIS-I - Test DB server,MS 2008 R2 Std,Oracle 10gR2,16,2,250,0,0,0,50,Fiber Channel,SAS,GigE,Grp 1 is for all partitions on a test server. Additional disk space might be needed if tests use a copy of the real production database.
+RIS-I - Test Web or Citrix server,MS 2008 R2 Std,,16,2,150,0,0,0,50,Fiber Channel,SAS,GigE,Grp 1 is for all partitions.
+RIS-I - Web server large for eRadCockpit and WebMFD - single or LB srvr (80 CCU),MS 2008 R2 Ent,,128,8,192,87,0,0,100,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C:/192Gb), Grp 2 (T:/92Gb) / Each Virtual Server will be handled as Software-Only"
+RIS-I - Web server medium for eRadCockpit and WebMFD - single or load-bal. srvr (30 CCU),MS 2008 R2 Ent,,64,8,192,87,0,0,100,Fiber Channel,SAS,GigE,"Grp 1 is OS and apps (C:/192Gb), Grp 2 (T:/92Gb) / Each Virtual Server will be handled as Software-Only"
+RIS-I - Web server small for WebMFD only,MS 2008 R2 Std,,12,2,100,0,0,0,100,Fiber Channel,SAS,GigE,
+C360 - HAProxy Server,CentOS6.5 - 64bits,,2,2,20,0,0,0,10,Fiber Channel,SAS,GigE,> 10 GB for OS > 10 GB for apps -  Deploy in PUBLIC VLAN
+C360 - Web App Server (Play&DocViewer),CentOS6.5 - 64bits,,16,8,150,0,0,0,50,Fiber Channel,SAS,GigE,> 100 GB for OS > 50 GB for /mnt/resource - Deploy in PRIVATE VLAN
+C360 - Predix Service Host Server,CentOS6.5 - 64bits,,16,8,150,0,0,0,10,Fiber Channel,SAS,GigE,> 100 GB for OS > 50 GB for /mnt/resource - Deploy in PRIVATE VLAN
+C360 - EA Server & DB,MS 2012 R2 Std,MS SQL 2014 Std,16,8,700,0,0,0,100,Fiber Channel,SAS,GigE,"> 40 GB for OS > 100 GB for SQL Database Server (D:) > 50GB for logs (E:), > 500GB encrypted (CIFS) - Deploy in PRIVATE VLAN"
+C360 - Rabbit MQ & App File Syst.,CentOS6.5 - 64bits,,4,2,540,0,0,0,10,Fiber Channel,SAS,GigE,> 40 GB for OS >  500GB for  /data - To be deployed in PRIVATE VLAN
+C360 - ZFP and Dakota Server,MS 2012 R2 Std,,16,8,50,0,0,0,10,Fiber Channel,SAS,GigE,> 50 GB for OS - Deploy in PRIVATE VLAN
+C360 - Active Directory,MS 2012 R2 Std,,4,2,50,0,0,0,10,Fiber Channel,SAS,GigE,> 40 GB for OS > 10 GB for logs - Deploy in Management VLAN
+CA - Centricity Anaesthesia - Rhapsody (150 - 200 clients),MS 2012 R2 Std,,6,2,0,0,0,0,,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia - Rhapsody (up to 100 clients),MS 2012 R2 Std,,4,2,0,0,0,0,,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB (100 - 150 clients),MS 2012 R2 Std,MS SQL 2012 Std,24,8,0,0,0,0,4450,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB (150 - 200 clients),MS 2012 R2 Std,MS SQL 2012 Std,24,8,0,0,0,0,4450,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB (20 - 60 clients),MS 2012 R2 Std,MS SQL 2012 Std,16,4,0,0,0,0,2900,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB (60 - 100 clients),MS 2012 R2 Std,MS SQL 2012 Std,24,6,0,0,0,0,3850,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB (up to 20 clients),MS 2012 R2 Std,MS SQL 2012 Std,12,4,0,0,0,0,2600,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB with PREDIX (100 - 150 clients),MS 2012 R2 Std,MS SQL 2012 Std,32,8,0,0,0,0,4450,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB with PREDIX (150 - 200 clients),MS 2012 R2 Std,MS SQL 2012 Std,32,8,0,0,0,0,4450,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB with PREDIX (20 - 60 clients),MS 2012 R2 Std,MS SQL 2012 Std,24,4,0,0,0,0,2900,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB with PREDIX (60 - 100 clients),MS 2012 R2 Std,MS SQL 2012 Std,32,6,0,0,0,0,3850,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia App Server + DB with PREDIX (up to 20 clients),MS 2012 R2 Std,MS SQL 2012 Std,12,4,0,0,0,0,2600,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia Warehouse DB Server (100 - 150 clients),MS 2012 R2 Std,MS SQL 2012 Std,8,4,0,0,0,0,,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia Warehouse DB Server (150 - 200 clients),MS 2012 R2 Std,MS SQL 2012 Std,16,4,0,0,0,0,2200,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia Warehouse DB Server (60 - 100 clients),MS 2012 R2 Std,MS SQL 2012 Std,6,4,0,0,0,0,1770,Fiber Channel,SAS,GigE,
+CA - Centricity Anaesthesia Warehouse DB Server (up to 20 clients),MS 2012 R2 Std,MS SQL 2012 Std,4,4,0,0,0,0,1770,Fiber Channel,SAS,GigE,
+RIS_IC - RISDB,W2K8 R2 SP1,SQL 2012 Enterprise SP1,16,8,500,200,0,0,,Fiber Channel,SAS,GigE,C:100GB/D:200GB/ E:100GB/H:300GB -Add room for paging file for C: and H: - memory = 10% of DB size
+RIS_IC - RISCXR,W2K8 R2 SP1,SQL 2012 Standard SP1,16,4,325,100,0,0,,Fiber Channel,SAS,GigE,C:75GB/D:100GB/ E:100GB/H:150GB -Add room for paging file for C: and H:
+RIS_IC - RISWEB1,W2K8 R2 SP1,SQL 2012 Client Tool Connectivity,4,2,100,0,0,0,,Fiber Channel,SAS,GigE,C:75GB
+RIS_IC - RISWEB2,W2K8 R2 SP1,SQL 2012 Client Tool Connectivity,4,2,100,0,0,0,,Fiber Channel,SAS,GigE,C:75GB
+RIS_IC - RISRPT,W2K8 R2 SP1,SQL 2012 Client Tool Connectivity,8,4,175,0,0,0,,Fiber Channel,SAS,GigE,"C:75GB/D:100 - SAP Crystal Reports 2011, Microsoft Word 2010 (x86), Install PDF Reader "
+RIS_IC - RISFAX,W2K8 R2 SP1,-,4,2,100,0,0,0,,Fiber Channel,SAS,GigE,C:75GB - If VM - FOIP
+RIS_IC - RISTEST,W2K8 R2 SP1,SQL 2012 Standard SP1,16,4,500,200,0,0,,Fiber Channel,SAS,GigE,"C:100GB/D:200GB/ E:100GB/H:300GB -Add room for paging file for C: and H: - SAP Crystal Reports 2011 , Microsoft Word 2010 (x86), Install PDF Reader "
+RIS_IC - RISPREDIX,W2K8 R2 SP1,SQL 2012 Client Tool Connectivity,8,4,100,0,0,0,,Fiber Channel,SAS,GigE,C:100GB
+RIS_IC - RISALTRPT (If customer has Alt Rpt),W2K8 R2 SP1,SQL 2012 Standard SP1,16,,500,200,0,0,,Fiber Channel,SAS,GigE,C:100GB/D:200GB/ E:100GB/H:300GB -Add room for paging file for C: and H: - memory = 10% of DB size
+RIS_IC - RISDMS (If customer has DMS),W2K8 R2 SP1,,4,2,325,0,0,0,,Fiber Channel,SAS,GigE,C:75GB/D:250GB - Generic disk sizes - actual disk sizes may vary based on customer need
+PACSHealth,MS 2012 R2 Std,MS SQL 2014 Std,8,2,1120,0,0,0,100,Fiber Channel,SAS,GigE,C:\OS - 60GB (Min.) \ D:\DATA - 900GB (Min.) Ð (Virtual servers can initially be less but MUST have expansion capability) \ L:\LOGS - 60GB (Min.)  \ T:\TEMP - 100GB (Min.)
+PACSGear DMWL,MS 2012 R2 Std,MS SQL 2014 Std,4,4,80,0,0,0,100,Fiber Channel,SAS,GigE,Currently they do not have a VM specification document
+RMS Server,Ubuntu 3.13.0,MySQL 5.5.38,2,2,65,0,0,0,100,Fiber Channel,SAS,GigE,Delivered as an 3GB OVA
