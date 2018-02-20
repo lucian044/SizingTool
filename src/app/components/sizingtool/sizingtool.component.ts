@@ -27,19 +27,19 @@ export class SizingtoolComponent implements OnInit {
 
   data: any = [];
 
-  show: any = false;
-
   isCollapsedCCA: any = true;
-
   isCollapsedCCG: any = true;
-
   isCollapsedCCW: any = true;
+  isCollapsedCPACS: any = true;
+  isCollapsedCRMA: any = true;
+  isCollapsedDoseWatch: any = true;
+  isCollapsedLB: any = true;
 
   vCPUSum: any = 0;
   vRAMSum: any = 0;
   RAIDSum: any = 0;
   IOPSSum: any = 0;
-  
+
 
   constructor(private dataService: DataService) {
     this.populateData();
@@ -63,20 +63,135 @@ export class SizingtoolComponent implements OnInit {
     }
   }
 
+  changeCollapse(name: string) {
+    switch (name) {
+      case "isCollapsedCCA": {
+        this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedCCG": {
+        this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedCCW": {
+        this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedCPACS": {
+        this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedCRMA": {
+        this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedDoseWatch": {
+        this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedLB)
+          this.isCollapsedLB = !this.isCollapsedLB;
+        break;
+      }
+      case "isCollapsedLB": {
+        this.isCollapsedLB = !this.isCollapsedLB;
+        if (!this.isCollapsedCCA)
+          this.isCollapsedCCA = !this.isCollapsedCCA;
+        if (!this.isCollapsedCCG)
+          this.isCollapsedCCG = !this.isCollapsedCCG;
+        if (!this.isCollapsedCCW)
+          this.isCollapsedCCW = !this.isCollapsedCCW;
+        if (!this.isCollapsedCPACS)
+          this.isCollapsedCPACS = !this.isCollapsedCPACS;
+        if (!this.isCollapsedCRMA)
+          this.isCollapsedCRMA = !this.isCollapsedCRMA;
+        if (!this.isCollapsedDoseWatch)
+          this.isCollapsedDoseWatch = !this.isCollapsedDoseWatch;
+        break;
+      }
+    }
+  }
+
   vCPU(e: any, vcpu: number, vram: number, raid1: number, raid2: number, raid3: number, raid4: number, iops: number) {
     if (e.target.checked) {
       this.vCPUSum += vcpu;
       this.vRAMSum += vram;
       this.RAIDSum += raid1 + raid2 + raid3 + raid4;
       this.IOPSSum += iops;
-      console.log(this.IOPSSum);
     }
     if (!(e.target.checked)) {
       this.vCPUSum -= vcpu;
       this.vRAMSum -= vram;
       this.RAIDSum -= raid1 + raid2 + raid3 + raid4;
       this.IOPSSum -= iops;
-      console.log(this.IOPSSum);
     }
   }
 
