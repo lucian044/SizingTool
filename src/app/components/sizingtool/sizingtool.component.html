@@ -716,6 +716,7 @@
         <br /> IOPS: {{ IOPSSum }}
       </p>
       <h4>Number of OS</h4>
+      <button (click)="countOS()">Press</button>
       <div class="col-md-4">
         <p *ngFor="let opt2 of possibleOS">
           {{ opt2 }}:
@@ -734,6 +735,7 @@
       <table style="width: 100%">
         <tr>
           <th>Application</th>
+          <th>VM Qty</th>
           <th>OS</th>
           <th>Database</th>
           <th>vRAM</th>
@@ -750,6 +752,7 @@
         </tr>
         <tr *ngFor="let opt of selected">
           <td>{{ opt.Application }}</td>
+          <td>{{ opt.qty }}</td>
           <td>{{ opt.OS }}</td>
           <td>{{ opt.Database }}</td>
           <td>{{ opt.vRAM }}</td>

@@ -47,6 +47,7 @@ export class SizingtoolComponent implements OnInit {
   Oses: any = [];
   possibleOS: any = [];
   numPossibleOS: any = [];
+  OsObject: any = {};
   selected: any = [];
 
   vCPUSum: any = 0;
@@ -102,28 +103,27 @@ export class SizingtoolComponent implements OnInit {
       if (this.possibleOS.indexOf(opt) < 0)
         this.possibleOS.push(opt);
     }
+    console.log(this.Oses);
   }
 
   getNumPossibleOS() {
-    this.numPossibleOS = [];
-    var counter = 0;
+    this.OsObject = {};
     for (var i = 0; i < this.Oses.length; i++) {
-      counter++;
-      while (this.Oses[i] == this.Oses[i + 1]) {
-        counter++
-        i++
-      }
-      this.numPossibleOS.push(counter);
-      counter = 0;
+      this.OsObject[this.Oses[i]] = 1 + (this.OsObject[this.Oses[i]] || 0);
     }
+    this.numPossibleOS = this.generateArray(this.OsObject);
   }
+
+  generateArray(obj){
+    return Object.keys(obj).map((key)=>{ return obj[key]});
+ }
 
   addSelected(opt: any, qty: any, action: any) {
     if (action == 'set') {
       opt.qty = parseInt(qty, 10);
       this.selected.push(opt);
     }
-    else if (action == 'reset'){
+    else if (action == 'reset') {
       opt.qty = parseInt(qty, 10);
       this.selected.splice(this.selected.indexOf(opt), 1);
     }
@@ -695,5 +695,4 @@ export class SizingtoolComponent implements OnInit {
       }
     }
   }
-
 }
