@@ -303,9 +303,9 @@
           <br />
         </p>
         <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
         <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
       </div>
     </div>
   </div>

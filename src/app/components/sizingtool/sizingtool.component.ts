@@ -47,6 +47,7 @@ export class SizingtoolComponent implements OnInit {
   Oses: any = [];
   possibleOS: any = [];
   numPossibleOS: any = [];
+  selected: any = [];
 
   vCPUSum: any = 0;
   vRAMSum: any = 0;
@@ -80,13 +81,11 @@ export class SizingtoolComponent implements OnInit {
     for (var num = 0; num < qty; num++) {
       this.Oses.push(name);
     }
-    console.log("OSes: ", this.Oses);
   }
 
   removeOS(name: string, qty: number) {
     var index: number;
     var length = this.Oses.length;
-    console.log(qty);
     while (qty > 0) {
       index = this.Oses.indexOf(name);
       if (index > -1) {
@@ -103,23 +102,30 @@ export class SizingtoolComponent implements OnInit {
       if (this.possibleOS.indexOf(opt) < 0)
         this.possibleOS.push(opt);
     }
-    console.log("possibleIS: ", this.possibleOS);
   }
 
   getNumPossibleOS() {
     this.numPossibleOS = [];
     var counter = 0;
     for (var i = 0; i < this.Oses.length; i++) {
-        counter++;
-        while (this.Oses[i] == this.Oses[i + 1]) {
-          counter++
-          i++
-        }
-        this.numPossibleOS.push(counter);
-        counter = 0;
+      counter++;
+      while (this.Oses[i] == this.Oses[i + 1]) {
+        counter++
+        i++
+      }
+      this.numPossibleOS.push(counter);
+      counter = 0;
     }
-    for (let o of this.numPossibleOS) {
-      console.log(o);
+  }
+
+  addSelected(opt: any, qty: any, action: any) {
+    if (action == 'set') {
+      opt.qty = parseInt(qty, 10);
+      this.selected.push(opt);
+    }
+    else if (action == 'reset'){
+      opt.qty = parseInt(qty, 10);
+      this.selected.splice(this.selected.indexOf(opt), 1);
     }
   }
 
