@@ -50,6 +50,10 @@ export class SizingtoolComponent implements OnInit {
   OsObject: any = {};
   selected: any = [];
 
+  customerName: any = "";
+  currentDate: Date = new Date();
+  dateString: any = "";
+
   vCPUSum: any = 0;
   vRAMSum: any = 0;
   RAIDSum: any = 0;
@@ -58,6 +62,7 @@ export class SizingtoolComponent implements OnInit {
   constructor(private dataService: DataService) {
     this.populateData();
     this.setGroups();
+    this.dateString = this.currentDate.toLocaleDateString() + " " + this.currentDate.toLocaleTimeString();
   }
 
   ngOnInit() {

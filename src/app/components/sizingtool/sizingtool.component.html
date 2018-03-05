@@ -155,6 +155,11 @@
         </button>
       </p>
     </div>
+    <div class="col-md-1">
+      <p style="margin-left: 0 auto">
+        <label style="color: white">Customer:</label><input type="text" [(ngModel)]="customerName">
+      </p>
+    </div>
   </div>
   <div class="row noprint">
     <div class="col" *ngFor="let opt of cca">
@@ -730,6 +735,7 @@
   </div>
   <div class="row noscreen">
     <div class="col-md-12">
+      <h3>{{ customerName }} | {{ dateString }}</h3>
       <h4>Selected VMs</h4>
       <table style="width: 100%">
         <tr>
@@ -789,16 +795,16 @@
     </div>
   </div>
   <div class="row noscreen">
-      <div class="col-md-12">
-        <h4>Number of OS</h4>
-        <table>
-          <tr>
-            <th *ngFor="let opt of possibleOS" >{{ opt }}</th>
-          </tr>
-          <tr>
-            <td *ngFor="let opt of numPossibleOS" >{{ opt }}</td>
-          </tr>
-        </table>
-      </div>
+    <div class="col-md-12">
+      <h4>Number of OS</h4>
+      <table>
+        <tr>
+          <th *ngFor="let opt of possibleOS">{{ opt }}</th>
+        </tr>
+        <tr>
+          <td *ngFor="let opt of numPossibleOS">{{ opt }}</td>
+        </tr>
+      </table>
     </div>
+  </div>
 </div>
