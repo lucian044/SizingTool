@@ -103,7 +103,6 @@ export class SizingtoolComponent implements OnInit {
       if (this.possibleOS.indexOf(opt) < 0)
         this.possibleOS.push(opt);
     }
-    console.log(this.Oses);
   }
 
   getNumPossibleOS() {
