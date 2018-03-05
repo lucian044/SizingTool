@@ -80,7 +80,7 @@ export class SizingtoolComponent implements OnInit {
     for (var num = 0; num < qty; num++) {
       this.Oses.push(name);
     }
-    console.log(this.Oses);
+    console.log("OSes: ", this.Oses);
   }
 
   removeOS(name: string, qty: number) {
@@ -94,6 +94,7 @@ export class SizingtoolComponent implements OnInit {
         qty -= 1;
       }
       this.possibleOS.splice(this.possibleOS.indexOf(name), 1);
+      this.numPossibleOS.splice(this.possibleOS.indexOf(name), 1);
     }
   }
 
@@ -102,7 +103,7 @@ export class SizingtoolComponent implements OnInit {
       if (this.possibleOS.indexOf(opt) < 0)
         this.possibleOS.push(opt);
     }
-    console.log(this.possibleOS);
+    console.log("possibleIS: ", this.possibleOS);
   }
 
   getNumPossibleOS() {
