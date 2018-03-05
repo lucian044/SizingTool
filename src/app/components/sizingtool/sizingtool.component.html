@@ -8,10 +8,26 @@
     border-style: outset;
   }
 
+  @media screen {
+    .noprint {}
+    .noscreen {
+      display: none;
+    }
+  }
+
   @media print {
     .noprint {
       display: none;
     }
+    .noscreen {}
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 75%;
   }
 
 </style>
@@ -150,544 +166,548 @@
       </div>
     </div>
   </div>
-  <div class="col" *ngFor="let opt of ccg">
-    <div id="collapseCCG" [ngbCollapse]="isCollapsedCCG">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+  <div class="row noprint">
+    <div class="col" *ngFor="let opt of ccg">
+      <div id="collapseCCG" [ngbCollapse]="isCollapsedCCG">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
               opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col" *ngFor="let opt of ccw">
-    <div id="collapseCCW" [ngbCollapse]="isCollapsedCCW">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+    <div class="col" *ngFor="let opt of ccw">
+      <div id="collapseCCW" [ngbCollapse]="isCollapsedCCW">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
               opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col" *ngFor="let opt of cpacs">
-    <div id="collapseCPACS" [ngbCollapse]="isCollapsedCPACS">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+    <div class="col" *ngFor="let opt of cpacs">
+      <div id="collapseCPACS" [ngbCollapse]="isCollapsedCPACS">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
                 opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col" *ngFor="let opt of crma">
-    <div id="collapseCRMA" [ngbCollapse]="isCollapsedCRMA">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+    <div class="col" *ngFor="let opt of crma">
+      <div id="collapseCRMA" [ngbCollapse]="isCollapsedCRMA">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
                   opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of dosewatch">
+      <div id="collapseDoseWatch" [ngbCollapse]="isCollapsedDoseWatch">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of lb">
+      <div id="collapseLB" [ngbCollapse]="isCollapsedLB">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of misc">
+      <div id="collapseMisc" [ngbCollapse]="isCollapsedMisc">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of onwatch">
+      <div id="collapseOnWatch" [ngbCollapse]="isCollapsedOnWatch">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of pacs">
+      <div id="collapsePACS" [ngbCollapse]="isCollapsedPACS">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of risi">
+      <div id="collapseRISI" [ngbCollapse]="isCollapsedRISI">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of c360">
+      <div id="collapsec360" [ngbCollapse]="isCollapsedc360">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ca">
+      <div id="collapseCA" [ngbCollapse]="isCollapsedCA">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of risic">
+      <div id="collapseRISIC" [ngbCollapse]="isCollapsedRISIC">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of other">
+      <div id="collapseOther" [ngbCollapse]="isCollapsedOther">
+        <div class="card">
+          <div class="card-body">
+            <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col" *ngFor="let opt of dosewatch">
-    <div id="collapseDoseWatch" [ngbCollapse]="isCollapsedDoseWatch">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of lb">
-    <div id="collapseLB" [ngbCollapse]="isCollapsedLB">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of misc">
-    <div id="collapseMisc" [ngbCollapse]="isCollapsedMisc">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of onwatch">
-    <div id="collapseOnWatch" [ngbCollapse]="isCollapsedOnWatch">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of pacs">
-    <div id="collapsePACS" [ngbCollapse]="isCollapsedPACS">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of risi">
-    <div id="collapseRISI" [ngbCollapse]="isCollapsedRISI">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of c360">
-    <div id="collapsec360" [ngbCollapse]="isCollapsedc360">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of ca">
-    <div id="collapseCA" [ngbCollapse]="isCollapsedCA">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of risic">
-    <div id="collapseRISIC" [ngbCollapse]="isCollapsedRISIC">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of other">
-    <div id="collapseOther" [ngbCollapse]="isCollapsedOther">
-      <div class="card">
-        <div class="card-body">
-          <input type="checkbox" (change)="showItems(opt.Application); totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1, opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS)"> {{ opt.Application }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col" *ngFor="let opt of cca">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+  <div class="row noprint">
+    <div class="col" *ngFor="let opt of cca">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
         opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
         opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccg">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ccw">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of cpacs">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of crma">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of dosewatch">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="row noprint">
+      <div class="col" *ngFor="let opt of lb">
+        <div id="{{ opt.Application }}" style="display:none">
+          <div class="col-md-10 box">
+            <input type="text" #qty/> Quantity
+            <h5>Application: {{ opt.Application }}</h5>
+            <p> OS: {{ opt.OS }}
+              <br /> Database: {{ opt.Database }}
+              <br /> vRAM: {{ opt.vRAM }}
+              <br /> vCPU: {{ opt.vCPU }}
+              <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+              <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+              <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+              <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+              <br /> IOPS: {{ opt.IOPS }}
+              <br /> Interface 1: {{ opt.Interface1 }}
+              <br /> Interface 2: {{ opt.Interface2 }}
+              <br /> Interface 3: {{ opt.Interface3 }}
+              <br /> Notes: {{ opt.Notes }}
+              <br />
+            </p>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngFor="let opt of misc">
+        <div id="{{ opt.Application }}" style="display:none">
+          <div class="col-md-10 box">
+            <input type="text" #qty/> Quantity
+            <h5>Application: {{ opt.Application }}</h5>
+            <p> OS: {{ opt.OS }}
+              <br /> Database: {{ opt.Database }}
+              <br /> vRAM: {{ opt.vRAM }}
+              <br /> vCPU: {{ opt.vCPU }}
+              <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+              <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+              <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+              <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+              <br /> IOPS: {{ opt.IOPS }}
+              <br /> Interface 1: {{ opt.Interface1 }}
+              <br /> Interface 2: {{ opt.Interface2 }}
+              <br /> Interface 3: {{ opt.Interface3 }}
+              <br /> Notes: {{ opt.Notes }}
+              <br />
+            </p>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngFor="let opt of onwatch">
+        <div id="{{ opt.Application }}" style="display:none">
+          <div class="col-md-10 box">
+            <input type="text" #qty/> Quantity
+            <h5>Application: {{ opt.Application }}</h5>
+            <p> OS: {{ opt.OS }}
+              <br /> Database: {{ opt.Database }}
+              <br /> vRAM: {{ opt.vRAM }}
+              <br /> vCPU: {{ opt.vCPU }}
+              <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+              <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+              <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+              <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+              <br /> IOPS: {{ opt.IOPS }}
+              <br /> Interface 1: {{ opt.Interface1 }}
+              <br /> Interface 2: {{ opt.Interface2 }}
+              <br /> Interface 3: {{ opt.Interface3 }}
+              <br /> Notes: {{ opt.Notes }}
+              <br />
+            </p>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngFor="let opt of pacs">
+        <div id="{{ opt.Application }}" style="display:none">
+          <div class="col-md-10 box">
+            <input type="text" #qty/> Quantity
+            <h5>Application: {{ opt.Application }}</h5>
+            <p> OS: {{ opt.OS }}
+              <br /> Database: {{ opt.Database }}
+              <br /> vRAM: {{ opt.vRAM }}
+              <br /> vCPU: {{ opt.vCPU }}
+              <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+              <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+              <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+              <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+              <br /> IOPS: {{ opt.IOPS }}
+              <br /> Interface 1: {{ opt.Interface1 }}
+              <br /> Interface 2: {{ opt.Interface2 }}
+              <br /> Interface 3: {{ opt.Interface3 }}
+              <br /> Notes: {{ opt.Notes }}
+              <br />
+            </p>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+            <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of risi">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of c360">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of ca">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of risic">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0">Reset Quantity</button>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngFor="let opt of other">
+      <div id="{{ opt.Application }}" style="display:none">
+        <div class="col-md-10 box">
+          <input type="text" #qty/> Quantity
+          <h5>Application: {{ opt.Application }}</h5>
+          <p> OS: {{ opt.OS }}
+            <br /> Database: {{ opt.Database }}
+            <br /> vRAM: {{ opt.vRAM }}
+            <br /> vCPU: {{ opt.vCPU }}
+            <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
+            <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
+            <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
+            <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
+            <br /> IOPS: {{ opt.IOPS }}
+            <br /> Interface 1: {{ opt.Interface1 }}
+            <br /> Interface 2: {{ opt.Interface2 }}
+            <br /> Interface 3: {{ opt.Interface3 }}
+            <br /> Notes: {{ opt.Notes }}
+            <br />
+          </p>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS(); addSelected(opt, qty.value, 'set')">Set Quantity</button>
+          <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
+        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); addSelected(opt, qty.value, 'reset'); qty.value = 0;">Reset Quantity</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col" *ngFor="let opt of ccg">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of ccw">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of cpacs">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value)">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of crma">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of dosewatch">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of lb">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of misc">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of onwatch">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of pacs">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of risi">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of c360">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of ca">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of risic">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="col" *ngFor="let opt of other">
-    <div id="{{ opt.Application }}" style="display:none">
-      <div class="col-md-10 box">
-        <input type="text" #qty/> Quantity
-        <h5>Application: {{ opt.Application }}</h5>
-        <p> OS: {{ opt.OS }}
-          <br /> Database: {{ opt.Database }}
-          <br /> vRAM: {{ opt.vRAM }}
-          <br /> vCPU: {{ opt.vCPU }}
-          <br /> RAID 5 GP1: {{ opt.RAID5GP1 }}
-          <br /> RAID 1/0 GP2: {{ opt.RAID10GP2 }}
-          <br /> RAID 5 GP3: {{ opt.RAID5GP3 }}
-          <br /> RAID 5 GP4: {{ opt.RAID5GP4 }}
-          <br /> IOPS: {{ opt.IOPS }}
-          <br /> Interface 1: {{ opt.Interface1 }}
-          <br /> Interface 2: {{ opt.Interface2 }}
-          <br /> Interface 3: {{ opt.Interface3 }}
-          <br /> Notes: {{ opt.Notes }}
-          <br />
-        </p>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'set'); addOS(opt.OS, qty.value); getPossibleOS(); getNumPossibleOS()">Set Quantity</button>
-        <button class="noprint" type="btn btn-primary" (click)="totalSum($event, opt.vCPU, opt.vRAM, opt.RAID5GP1,
-        opt.RAID10GP2, opt.RAID5GP3, opt.RAID5GP4, opt.IOPS, qty.value, 'reset'); removeOS(opt.OS, qty.value); qty.value = 0;">Reset Quantity</button>
-      </div>
-    </div>
-  </div>
-  <div class="row">
+  <div class="row noprint">
     <div class="col-md-10 box">
       <h4>Totals</h4>
       <p> vRAM: : {{ vRAMSum }}
@@ -698,14 +718,85 @@
       <h4>Number of OS</h4>
       <div class="col-md-4">
         <p *ngFor="let opt2 of possibleOS">
-          {{ opt2 }}: 
+          {{ opt2 }}:
         </p>
       </div>
       <div class="col-md-1">
         <p *ngFor="let opt of numPossibleOS">
-          {{ opt }} 
+          {{ opt }}
         </p>
       </div>
     </div>
   </div>
+  <div class="row noscreen">
+    <div class="col-md-12">
+      <h4>Selected VMs</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Application</th>
+          <th>OS</th>
+          <th>Database</th>
+          <th>vRAM</th>
+          <th>vCPU</th>
+          <th>RAID 5 GP1</th>
+          <th>RAID 1/0 GP2</th>
+          <th>RAID 5 GP3</th>
+          <th>RAID 5 GP4</th>
+          <th>IOPS</th>
+          <th>Interface1</th>
+          <th>Interface2</th>
+          <th>Interface3</th>
+          <th>Notes</th>
+        </tr>
+        <tr *ngFor="let opt of selected">
+          <td>{{ opt.Application }}</td>
+          <td>{{ opt.OS }}</td>
+          <td>{{ opt.Database }}</td>
+          <td>{{ opt.vRAM }}</td>
+          <td>{{ opt.vCPU }}</td>
+          <td>{{ opt.RAID5GP1 }}</td>
+          <td>{{ opt.RAID10GP2 }}</td>
+          <td>{{ opt.RAID5GP3 }}</td>
+          <td>{{ opt.RAID5GP4 }}</td>
+          <td>{{ opt.IOPS }}</td>
+          <td>{{ opt.Interface1 }}</td>
+          <td>{{ opt.Interface2 }}</td>
+          <td>{{ opt.Interface3 }}</td>
+          <td>{{ opt.Notes }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row noscreen">
+    <div class="col-md-12">
+      <h4>Totals</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>vRAM</th>
+          <th>vCPU</th>
+          <th>RAID</th>
+          <th>IOPS</th>
+        </tr>
+        <tr>
+          <td>{{ vRAMSum }}</td>
+          <td>{{ vCPUSum }}</td>
+          <td>{{ RAIDSum }}</td>
+          <td>{{ IOPSSum }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row noscreen">
+      <div class="col-md-12">
+        <h4>Number of OS</h4>
+        <table>
+          <tr>
+            <th *ngFor="let opt of possibleOS" >{{ opt }}</th>
+          </tr>
+          <tr>
+            <td *ngFor="let opt of numPossibleOS" >{{ opt }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 </div>
